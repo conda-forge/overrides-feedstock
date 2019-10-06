@@ -1,8 +1,8 @@
 {% set name = "overrides" %}
-{% set version = "1.9" %}
+{% set version = "2.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "91b59ac1f6f38aae1531f5d6111033b8f4d7e593306bd282c3f9078202567963" %}
+{% set hash_value = "63293d9b03629507396ddd961bd5773f136d602f34b9b3da93351dfa163fc0d9" %}
 
 package:
   name: '{{ name|lower }}'
@@ -16,7 +16,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
