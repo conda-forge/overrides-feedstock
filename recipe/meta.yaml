@@ -1,8 +1,8 @@
 {% set name = "overrides" %}
-{% set version = "2.6" %}
+{% set version = "2.7.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "1eeaa8638e3b11f09c20d10ea03f2b90c7dc24798ab70787dd2c6d7a2bf60fa3" %}
+{% set hash_value = "d8532646879a1e2bb20eb0e21d135d2bf7cac2f843e9b71b53ae2447c62c33e4" %}
 
 package:
   name: '{{ name|lower }}'
