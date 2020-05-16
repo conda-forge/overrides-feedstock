@@ -1,17 +1,14 @@
 {% set name = "overrides" %}
-{% set version = "2.8.0" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "2ee4055a686a3ab30621deca01e43562e97825e29b7993e66d73f287d204e868" %}
+{% set version = "3.0.0" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7dafd6efc15c809f0d812515bc1e8f64ffe28583d20e9046f95a2c010b4b6cdf
 
 build:
   noarch: python
@@ -33,7 +30,7 @@ about:
   home: https://github.com/mkorpela/overrides
   license: Apache-2.0
   license_family: APACHE
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
   summary: A decorator to automatically detect mismatch when overriding a method.
   description: A decorator to automatically detect mismatch when overriding a method.
   doc_url: https://github.com/mkorpela/overrides
