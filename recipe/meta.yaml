@@ -1,5 +1,5 @@
 {% set name = "overrides" %}
-{% set version = "3.1.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30f761124579e59884b018758c4d7794914ef02a6c038621123fec49ea7599c6
+  sha256: fec5166d59c057efd1b8d7b723b13fda5f3f753bbe66e752f6ce4f522db697fc
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - pip
     - python
   run:
