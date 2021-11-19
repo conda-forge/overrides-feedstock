@@ -29,7 +29,7 @@ test:
   source_files:
     - tests/
   commands:
-    - pytest -v tests/
+    - pytest -v tests/ -k "not test_nested_typevar_in_signature"
 
 about:
   home: https://github.com/mkorpela/overrides
