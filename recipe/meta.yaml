@@ -24,6 +24,12 @@ requirements:
 test:
   imports:
     - overrides
+  requires:
+    - pytest
+  source_files:
+    - tests/
+  commands:
+    - pytest -v tests/
 
 about:
   home: https://github.com/mkorpela/overrides
