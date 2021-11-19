@@ -1,14 +1,12 @@
-{% set name = "overrides" %}
-{% set version = "4.1.2" %}
+{% set version = "5.0.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: overrides
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9c14302dd56a444b47b237ca42430d2e691a6794d49fff9c977d05af4e1fc850
+  url: https://github.com/mkorpela/overrides/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 8df893317b4eee31d229ca2925880d51fbc8aa0cb71bb4252dc7b4be0871ca10
 
 build:
   noarch: python
