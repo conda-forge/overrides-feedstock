@@ -1,4 +1,4 @@
-{% set version = "7.2.0" %}
+{% set version = "7.3.0" %}
 
 package:
   name: overrides
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/mkorpela/overrides/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 3f716e652abd9eebf38d725422ed5a4f9d5215b1a9d4e5cd8262f8a8c0bbb62d
+  sha256: e9c7c61147f9f3abb290c6db0ae7d4843f0141bdbdb75f8e88e1e197c7d2a5a5
 
 build:
   noarch: python
